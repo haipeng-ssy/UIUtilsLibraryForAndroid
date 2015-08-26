@@ -1,5 +1,8 @@
 package com.example.uiutilslibraryforandroid;
 
+import com.example.uiutilslibraryforandroid.sliding.SlideAllActivityThread;
+import com.example.uiutilslibraryforandroid.sliding.SlidingActivity;
+
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -52,8 +55,10 @@ public class MainActivity extends ActionBarActivity {
 			OnClickListener {
 
 		Button btn_slide_all;
+		Button btn_slide_all_good;
 		Button btn_slide_on;
 		Button btn_slide_qq;
+		Button btn_myScroller;
 
 		Intent intent = new Intent();
 		public PlaceholderFragment() {
@@ -65,12 +70,16 @@ public class MainActivity extends ActionBarActivity {
 			View rootView = inflater.inflate(R.layout.fragment_main, container,
 					false);
 			btn_slide_all = (Button) rootView.findViewById(R.id.btn_slide_all);
+			btn_slide_all_good = (Button) rootView.findViewById(R.id.btn_slide_all_good);
 			btn_slide_on = (Button) rootView.findViewById(R.id.btn_slide_on);
 			btn_slide_qq = (Button) rootView.findViewById(R.id.btn_slide_qq);
+			btn_myScroller = (Button) rootView.findViewById(R.id.btn_myScroller);
 
 			btn_slide_all.setOnClickListener(this);
+			btn_slide_all_good.setOnClickListener(this);
 			btn_slide_on.setOnClickListener(this);
 			btn_slide_qq.setOnClickListener(this);
+			btn_myScroller.setOnClickListener(this);
 
 			return rootView;
 		}
@@ -80,10 +89,15 @@ public class MainActivity extends ActionBarActivity {
 			switch (v.getId()) {
 			case R.id.btn_slide_all:
 				
-                intent.setClass(getActivity(), SlideAllActivity.class);
+                intent.setClass(getActivity(), SlideAllActivityThread.class);
                 startActivity(intent);
                 getActivity().finish();
                 break;
+			case R.id.btn_slide_all_good:
+                intent.setClass(getActivity(), SlidingActivity.class);
+                startActivity(intent);
+                getActivity().finish();
+				break;
 			case R.id.btn_slide_on:
 //				 intent.setClass(this, cls);
 //	                startActivity(intent);
@@ -91,6 +105,9 @@ public class MainActivity extends ActionBarActivity {
 			case R.id.btn_slide_qq:
 //				 intent.setClass(this, cls);
 //	                startActivity(intent);
+				break;
+			case R.id.btn_myScroller:
+				
 				break;
                  
 			default:

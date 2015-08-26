@@ -1,0 +1,2 @@
+1.SlideAllActivityThread.java是通过setLayout,Thread实现的侧边滑动
+2.SlidingActivity是通过Scroller computeScroll measure onLayout等实现的侧边滑动，比较好

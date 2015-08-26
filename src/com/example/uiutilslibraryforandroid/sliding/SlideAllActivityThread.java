@@ -1,4 +1,6 @@
-package com.example.uiutilslibraryforandroid;
+package com.example.uiutilslibraryforandroid.sliding;
+
+import com.example.uiutilslibraryforandroid.R;
 
 import android.app.Activity;
 import android.os.AsyncTask;
@@ -12,7 +14,7 @@ import android.view.Window;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 
-public class SlideAllActivity extends Activity implements OnTouchListener,
+public class SlideAllActivityThread extends Activity implements OnTouchListener,
 		OnClickListener {
 
 	private LinearLayout mLayout;
@@ -124,7 +126,6 @@ public class SlideAllActivity extends Activity implements OnTouchListener,
 			original_move_x = move_x;
 			break;
 		case MotionEvent.ACTION_UP:
-
 			original_move_x = 0;
 			if (!mIsShow) {
 				if (menuParams.leftMargin <= -300) {

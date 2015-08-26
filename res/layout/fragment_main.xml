@@ -11,26 +11,36 @@
 
     <Button
         android:id="@+id/btn_slide_all"
-        android:layout_width="100dp"
+        android:layout_width="200dp"
         android:layout_height="50dp"
         android:text="侧边滑动，全部右移" />
-
+    <Button
+        android:id="@+id/btn_slide_all_good"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="侧边滑动，全部右移,比较好的" />
     <Button
         android:id="@+id/btn_slide_on"
-        android:layout_width="100dp"
+        android:layout_width="200dp"
         android:layout_height="50dp"
         android:text="侧边滑动，覆盖在上边" />
 
     <Button
         android:id="@+id/btn_slide_qq"
-        android:layout_width="100dp"
+        android:layout_width="200dp"
         android:layout_height="50dp"
         android:text="侧边滑动，如qq" />
     
     <Button
-        android:layout_width="100dp"
+        android:layout_width="200dp"
         android:layout_height="50dp"
         android:text="侧边滑动，幻灯片轮播片" />
+    
+        <Button
+        android:id="@+id/btn_myScroller"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="MyScroller" />
     
 
 </LinearLayout>
